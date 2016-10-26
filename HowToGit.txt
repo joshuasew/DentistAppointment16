@@ -1,0 +1,7 @@
+git status --> tells you where you are, which branch or master
+go to the right branch --> git checkout develop
+git init --> initialize folder
+git add <FileName> --> add file
+git commit -m "Comment" --> commit your file
+git pull <url> --> pull existing files
+git push --> add your file to the hub
