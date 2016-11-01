@@ -53,7 +53,6 @@ public class DentalAppointment{
         endTime.setMinutes(endTime.GetMinutes() + duration);
       }
 
-
 	}
 
 	public void display(){
