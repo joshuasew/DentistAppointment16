@@ -1,9 +1,3 @@
-/*
- * Joshua Sew-Hee and Hanleigh Heinzmann
- * Date Modified: Oct 26, 2016
- * ODD - Date
- */
-
  public class Date{
    private int month;
    private int day;
