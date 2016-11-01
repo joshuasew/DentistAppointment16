@@ -21,7 +21,7 @@ public class Time{
     }
   }
 
-  private void displayTime()
+  public void displayTime()
   {
    if(minutes < 10){
     System.out.println(this.hours + ":0" + this.minutes);
@@ -31,7 +31,7 @@ public class Time{
    }
   }
 
-  private void setHours(int hours)
+  public void setHours(int hours)
   {
    this.hours = hours;
   }
@@ -52,9 +52,9 @@ public class Time{
 
   public static void main(String[]args){
     Scanner sc = new Scanner(System.in);
-    Time [] times = new Time[4];
-    for(int i = 0; i<4; i++)
-    {
+    //Time [] times = new Time[4];
+   // for(int i = 0; i<4; i++)
+    //{
       System.out.println("Enter the hours in military time: ");
       int militaryTime = sc.nextInt();
       System.out.println("Enter the minutes: ");
@@ -73,14 +73,14 @@ public class Time{
       else if(time2.GetMinutes() + addedMinutes == 60)
       {
         time2.setHours(time2.GetHours() + 1);
+        time2.setMinutes(0);
       }
 
       else{
         time2.setMinutes(time2.GetMinutes() + addedMinutes);
       }
 
-      time2.displayTime();
+     
   
   }
-}
 }
