@@ -14,6 +14,12 @@ public class Time{
     this.hours = hours;
     this.minutes = minutes;
 
+    if (hours < 0 || minutes < 0)
+    {
+      this.hours = 0;
+      this.minutes = 0;
+    }
+
     if (hours > 23 || minutes > 59)
     {
       this.hours = 23;
@@ -23,12 +29,7 @@ public class Time{
 
   public void displayTime()
   {
-   if(minutes < 10){
-    System.out.println(this.hours + ":0" + this.minutes);
-   }
-   else{
-    System.out.println(this.hours + ":" + this.minutes);
-   }
+    System.out.printf("%d:%02d.\n", this.hours, this.minutes);
   }
 
   public void setHours(int hours)
@@ -62,6 +63,12 @@ public class Time{
       System.out.println("Enter the time you would like to add in minutes: ");
       int addedMinutes = sc.nextInt();
 
+      while(addedMinutes < 0)
+  		{
+  			System.out.println("Invalid minutes. Enter a value greater than 0: ");
+  			addedMinutes = sc.nextInt();
+  		}
+
       Time time2 = new Time(militaryTime, militaryMinutes);
 
       if(time2.GetMinutes() + addedMinutes > 60)
@@ -76,11 +83,9 @@ public class Time{
         time2.setMinutes(0);
       }
 
-      else{
+      else
+      {
         time2.setMinutes(time2.GetMinutes() + addedMinutes);
       }
-
-     
-  
   }
 }
