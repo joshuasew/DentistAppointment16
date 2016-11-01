@@ -76,7 +76,7 @@ public class Time{
         time2.setHours(time2.GetHours() +1);
         time2.setMinutes((addedMinutes + time2.GetMinutes())- 60);
       }
-
+      
       else if(time2.GetMinutes() + addedMinutes == 60)
       {
         time2.setHours(time2.GetHours() + 1);
